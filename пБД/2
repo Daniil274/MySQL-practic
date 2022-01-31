@@ -1,0 +1,29 @@
+CREATE TABLE `j` (
+       `Jnum` varchar(6) NOT NULL default '',
+       `Jname` varchar(20) default NULL,
+	   `City` varchar(20) default NULL,
+       PRIMARY KEY (`Jnum`)
+     ) ENGINE=MyISAM;
+CREATE TABLE `p` (
+       `Pnum` varchar(6) NOT NULL default '',
+       `Pname` varchar(20) default NULL,
+       `Color` varchar(20) default NULL,
+       `Weight` int(11) default NULL,
+       `City` varchar(20) default NULL,
+       PRIMARY KEY (`Pnum`)
+     ) ENGINE=MyISAM;
+CREATE TABLE `s` (
+       `Snum` varchar(6) NOT NULL default '',
+       `Sname` varchar(20) default NULL,
+       `Rating` int(11) default NULL,
+       `City` varchar(20) default NULL,
+       PRIMARY KEY (`Snum`)
+     ) ENGINE=MyISAM;
+	 
+CREATE TABLE `spj` (
+		`Snum` varchar(6) NOT NULL default '',
+		`Pnum` varchar(6) NOT NULL default '',
+		`Jnum` varchar(6) NOT NULL default '',
+		`Quantity` int(11) default NULL,
+		PRIMARY KEY (`Snum`,`Pnum`,`Jnum`)
+) ENGINE=MyISAM;w
